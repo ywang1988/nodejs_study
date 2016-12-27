@@ -46,6 +46,9 @@ module.exports = {
 
 			var array = ["email","pwd"];
 			function callback(data) {
+                res.writeHead(200, {
+                    'Content-Type' : 'text/html;    charset=utf-8'
+                });
 				var dataStr = data.toString();
 				for(var i=0;i<array.length;i++) {
 					var re = new RegExp("{"+array[i]+"}",'g');
